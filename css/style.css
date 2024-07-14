@@ -1,0 +1,139 @@
+body{
+    background-color: black;
+}
+.allMeals .item , .search-meal .item , .categories .item , .areas .item , .integrations .item{
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.allMeals .item-inner , .search-meal .item-inner , .categories .item-inner , .areas .item-inner , .integrations .item-inner{
+    background-color: #ffffffb4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.allMeals .item:hover .item-inner, .search-meal .item:hover .item-inner, .categories .item:hover .item-inner, .areas .item:hover .item-inner, .integrations .item:hover .item-inner{
+    opacity: 1;
+    top: 0;
+}
+.mealDetails .tags{
+    background-color: #F8D7DA;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #842029;
+}
+#recipes{
+    background-color: #CFF4FC;
+    color: #055160;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-inline: 5px;
+}
+
+/* sidebar */
+aside{
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    white-space: nowrap;
+}
+.sideBarr-box ul li{
+   margin: 20px 0;
+   cursor: pointer;
+   animation: fadeInUpBig;
+   animation-duration: 0.5s;
+}
+.sideBarr-box i{
+    cursor: pointer;
+}
+.sideBar-header{
+    background-color: white;
+}
+.sideBar-header i{
+    cursor: pointer;
+}
+.sideBar-header img{
+    width: 35px;
+    height: 35px;
+}
+.outer-side{
+    display: none;
+}
+
+.search-meal .form-control{
+    background-color: transparent;
+   color: white;
+}
+input::placeholder {
+    color: #6C757D !important;
+}
+.allMeals button{
+    background-color: transparent;
+    border: 1px solid #842029;
+    color: #842029;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+.loading{
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+@media screen  and (max-width: 700px) {
+    .sideBar-header img{
+        width: 25px;
+        height: 25px;
+    }
+    .sideBar-header i{
+        font-size: 15px !important;
+    }
+}
